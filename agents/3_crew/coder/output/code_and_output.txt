@@ -1,0 +1,24 @@
+```python
+num_terms = 10000
+total_sum = 0.0
+
+for i in range(num_terms):
+    denominator = 2 * i + 1
+    term = 1.0 / denominator
+    
+    # The sign alternates. i=0 (term 1) is positive, i=1 (term 2) is negative, etc.
+    if i % 2 == 0:
+        total_sum += term
+    else:
+        total_sum -= term
+
+# The final result is 4 times the sum
+result = total_sum * 4
+
+print(f"The sum of the first {num_terms} terms (multiplied by 4) is: {result}")
+```
+
+Output of the code:
+```
+The sum of the first 10000 terms (multiplied by 4) is: 3.1414926535900345
+```

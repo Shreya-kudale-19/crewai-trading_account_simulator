@@ -1,0 +1,14 @@
+To run the code successfully:
+go to the correct dir -> cd agnets/3_crew/----
+activate the vnev - > source .venv/bin/activate
+crewai run 
+
+if error then run the follwing command-> 
+cd /workspaces/codespaces-blank/agents/3_crew/engineering_team && uv add "crewai[google-genai]"
+
+crewai run
+
+-------------------- for engineering team ---------------------
+follow the same above steps
+uv add gradio -> for UI 
+uv run app.py 
