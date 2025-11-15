@@ -1,0 +1,40 @@
+```text
+The following Python program calculates the sum of the first 10,000 terms of the series $1 - 1/3 + 1/5 - 1/7 + \dots$ (the Leibniz series for $\pi/4$) and multiplies the total by 4.
+
+### Code
+
+```python
+# Calculate the sum of the first 10,000 terms of the Leibniz series for pi/4: 1 - 1/3 + 1/5 - 1/7 + ...
+NUM_TERMS = 10000
+leibniz_sum = 0.0
+
+# We iterate from k=0 up to k=9999 (10,000 terms)
+for k in range(NUM_TERMS):
+    # Calculate the denominator (1, 3, 5, 7, ...) which is 2k + 1
+    denominator = 2 * k + 1
+    
+    # Determine the sign based on k: k=0, 2, 4... are positive; k=1, 3, 5... are negative.
+    if k % 2 == 0:
+        # Positive term: +1 / (2k + 1)
+        leibniz_sum += 1.0 / denominator
+    else:
+        # Negative term: -1 / (2k + 1)
+        leibniz_sum -= 1.0 / denominator
+
+# The Leibniz series converges to pi/4. Multiply by 4 for the final result (approximation of pi).
+pi_approximation = leibniz_sum * 4
+
+# Print the results
+print(f"Number of terms calculated: {NUM_TERMS}")
+print(f"Sum of the series (pi/4 approximation): {leibniz_sum}")
+print(f"Final calculated value (multiplied by 4): {pi_approximation}")
+```
+
+### Output
+
+```
+Number of terms calculated: 10000
+Sum of the series (pi/4 approximation): 0.7853731633975086
+Final calculated value (multiplied by 4): 3.1414926535900345
+```
+```
