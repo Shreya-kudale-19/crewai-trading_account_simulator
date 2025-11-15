@@ -16,3 +16,4 @@ In the "src/config" folder modify the -> agents.yaml
 modify the "crew.py" and "main.py" files to run the crew
 (In crew.py we'll define all the agnets and tasks that we have written in our yaml files and a "@crew" func to orchestrate all the agents and tasks)
 (In our main.py file )
+.env
